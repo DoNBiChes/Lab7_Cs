@@ -1,0 +1,6 @@
+@Lab7_3_HostAddress = http://localhost:5184
+
+GET {{Lab7_3_HostAddress}}/ApplicationDbContext/
+Accept: application/json
+
+###

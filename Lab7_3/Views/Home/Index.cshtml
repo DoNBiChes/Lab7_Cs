@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Lab7_3.MyEntity>
+
+@if (Model != null && Model.Any())
+{
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.CreatedAt</td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+else
+{
+    <p>No data available.</p>
+}
+
+<a href="/Home/ExportToExcel">Export to Excel</a>
